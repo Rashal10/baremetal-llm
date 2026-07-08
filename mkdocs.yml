@@ -1,0 +1,79 @@
+site_name: Baremetal LLM
+site_description: A from-scratch LLM training stack in PyTorch, built to learn every layer
+site_author: Rashal
+site_url: https://rashal10.github.io/baremetal-llm/
+repo_url: https://github.com/Rashal10/baremetal-llm
+repo_name: Rashal10/baremetal-llm
+copyright: Copyright &copy; 2026 Rashal
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Rashal10/baremetal-llm
+    - icon: fontawesome/solid/rocket
+      link: https://huggingface.co/spaces/Rashal10/baremetal-llm-demo
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Guide:
+      - Getting Started: getting-started.md
+      - Architecture: architecture.md
+      - Curriculum: curriculum.md
+  - Resources:
+      - Live Demo: demo.md
+      - API Overview: api.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc
+
+plugins:
+  - search
