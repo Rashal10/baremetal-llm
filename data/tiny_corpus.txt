@@ -1,0 +1,18 @@
+Transformers map tokens to vectors, apply self-attention, and predict the next token.
+Attention lets each position weigh other positions when building its representation.
+Scaled dot-product attention computes compatibility scores between queries and keys.
+Multi-head attention runs several attention patterns in parallel across subspaces.
+Rotary positional embeddings (RoPE) encode position by rotating query and key vectors.
+RMS normalization scales activations without centering, saving compute versus layer norm.
+SwiGLU feed-forward layers gate hidden units for stronger capacity per parameter.
+Grouped-query attention shares key-value heads across query heads to cut memory use.
+KV caching stores past keys and values so generation reuses prior computation.
+Byte-level models treat raw UTF-8 bytes as tokens for a 256-token vocabulary.
+Training minimizes cross-entropy between predicted and true next-token distributions.
+Gradient accumulation simulates large batches by summing gradients over micro-batches.
+Mixture-of-experts routes tokens to specialized feed-forward experts sparsely.
+Supervised fine-tuning adapts a base model on instruction-response demonstration pairs.
+Reward models score completions so reinforcement learning can prefer better answers.
+PPO clips policy updates to keep training stable during alignment fine-tuning.
+GRPO optimizes policies using relative rewards within a group of sampled completions.
+Building language models from scratch teaches every layer of the modern LLM stack.
