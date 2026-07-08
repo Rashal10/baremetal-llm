@@ -2,13 +2,13 @@
 
 I built this to actually understand how LLMs work under the hood instead of just calling `.fit()` on someone else's trainer. It is a PyTorch implementation of a modern transformer stack: attention, RoPE, MoE, instruction tuning, and RLHF (PPO/GRPO), all written from scratch with plain `nn.Module` code.
 
-It is organized as a nine-part, so you can run through it piece by piece: start with a basic attention visualization, end with a policy trained via GRPO.
+It is organized as a nine-part curriculum, so you can run through it piece by piece: start with a basic attention visualization, end with a policy trained via GRPO.
 
 [CI](https://github.com/Rashal10/baremetal-llm/actions/workflows/ci.yml)
 [docs](https://rashal10.github.io/baremetal-llm/)
 [license](LICENSE)
 
-- **Live demo:** [huggingface.co/spaces/Rashal10/baremetal-llm-demo](https://huggingface.co/spaces/Rashal10/baremetal-llm-demo)
+- **Interactive Demo:** [Google Colab Notebook](https://colab.research.google.com/github/Rashal10/baremetal-llm/blob/main/notebooks/01_quick_demo.ipynb) (Runs instantly online for free)
 - **Docs:** [rashal10.github.io/baremetal-llm](https://rashal10.github.io/baremetal-llm/)
 - **Colab:** [01_quick_demo.ipynb](notebooks/01_quick_demo.ipynb)
 
@@ -49,7 +49,11 @@ python -m baremetal_llm.cli demo --cpu
 There is also a small Gradio app if you would rather click through it:
 
 ```bash
+# Run local server
 python demos/app.py
+
+# Or run it and generate a free, temporary public link to share with others
+python demos/app.py --share
 ```
 
 And the test suite, if you want to check nothing is broken:
@@ -69,8 +73,7 @@ baremetal-llm/
 ├── demos/app.py       the Gradio demo
 ├── docs/              documentation site (MkDocs)
 ├── notebooks/         Colab notebooks
-├── tests/             pytest suite
-└── space/             files for the Hugging Face Space
+└── tests/             pytest suite
 ```
 
 
@@ -95,7 +98,7 @@ More detail on each in [docs/curriculum.md](docs/curriculum.md).
 
 ## Deploying your own copy
 
-If you want to run this yourself, or fork it, see [space/DEPLOY.md](space/DEPLOY.md) for putting the demo on Hugging Face Spaces, and enable GitHub Pages (Settings, Pages, Build with GitHub Actions) for the docs site.
+If you want to run this yourself, or fork it, enable GitHub Pages (Settings, Pages, Build with GitHub Actions) for the docs site.
 
 ## Contributing
 

@@ -1,4 +1,0 @@
-git+https://github.com/Rashal10/baremetal-llm.git
-gradio>=4.0
-matplotlib
-numpy

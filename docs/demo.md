@@ -1,51 +1,45 @@
-# Live Demo
+# Interactive Demos
 
-## Hugging Face Spaces
+Here are the ways you can run and play with the interactive models and visualizations.
 
-Deploy the Gradio app so interviewers can try it without cloning.
+## Google Colab (Instant, Zero Setup)
 
-### One-time setup
-
-1. Create a Hugging Face account at [huggingface.co](https://huggingface.co).
-2. Create a new **Space** → SDK: **Gradio** → name: `baremetal-llm-demo`.
-3. Upload the files from the `space/` folder in this repo (or connect the Space to GitHub).
-
-### Files to upload
-
-```
-space/
-  README.md          # Space metadata
-  app.py             # Gradio entry point
-  requirements.txt   # pip deps for the Space
-```
-
-### After deploy
-
-Your demo URL will be:
-
-`https://huggingface.co/spaces/Rashal10/baremetal-llm-demo`
-
-Add it to your resume and the main README.
-
-## Local Gradio
-
-```bash
-pip install -e ".[demo]"
-python demos/app.py
-```
-
-Default: `http://127.0.0.1:7860`
-
-## Colab
-
-No local install needed:
+The easiest way to see the model run without cloning or downloading anything is through our pre-built Google Colab notebooks. It is completely free and executes in any browser.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rashal10/baremetal-llm/blob/main/notebooks/01_quick_demo.ipynb)
 
-## GitHub Pages (this site)
+Inside the notebook you can:
+- Automatically train a tiny character-level model
+- Sample text completions dynamically
+- Play with hyperparameters like context length and embed dimensions
 
-Docs deploy automatically on push to `main` via `.github/workflows/docs.yml`.
+## Local Gradio UI
 
-Enable in repo **Settings → Pages → Source: GitHub Actions**.
+If you want the full graphical experience with the visualizers (including attention maps and mixture-of-expert routing histograms), you can run the Gradio interface locally.
 
-Site URL: `https://rashal10.github.io/baremetal-llm/`
+```bash
+# Install the package with demo dependencies
+pip install -e ".[demo]"
+
+# Launch the Gradio server
+python demos/app.py
+```
+
+Open **http://127.0.0.1:7860** in your browser.
+
+### Shareable Public Links
+
+If you are actively interviewing or collaborating with someone and want to give them access to your running model, you can launch the app with the `--share` flag:
+
+```bash
+python demos/app.py --share
+```
+
+This will automatically spin up a secure, temporary public URL (for example: `https://abcd1234.gradio.live`). This link will remain active for 72 hours and runs the model directly on your machine's hardware for free.
+
+## GitHub Pages Documentation
+
+This documentation site is built and deployed automatically whenever changes are pushed to the main branch of our repository.
+
+- **Docs Site URL:** [rashal10.github.io/baremetal-llm](https://rashal10.github.io/baremetal-llm/)
+- **Configuration:** Managed via `.github/workflows/docs.yml` and the standard `gh-pages` branch.

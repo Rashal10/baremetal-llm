@@ -299,4 +299,6 @@ def build_ui():
 
 
 if __name__ == "__main__":
-    build_ui().launch()
+    import sys
+    share = "--share" in sys.argv
+    build_ui().launch(share=share)

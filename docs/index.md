@@ -31,7 +31,7 @@ I wanted to actually understand the pieces that make up a modern LLM stack inste
 
 -   __Try it without installing anything__
 
-    Gradio demo on Hugging Face Spaces, notebooks on Colab
+    Notebooks on Colab
 
 </div>
 
@@ -68,7 +68,7 @@ I wanted to actually understand the pieces that make up a modern LLM stack inste
     ```
 
 !!! tip "If you are reviewing this for a role"
-    The fastest path is the [live demo](demo.md), or `python demos/app.py` locally. Train a tiny model in the **Train** tab, then generate from it right away in **Generate**.
+    The fastest path is the [interactive notebook](demo.md), or `python demos/app.py` locally. Train a tiny model in the **Train** tab, then generate from it right away in **Generate**.
 
 ## A few decisions worth explaining
 

@@ -46,7 +46,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/Rashal10/baremetal-llm
     - icon: fontawesome/solid/rocket
-      link: https://huggingface.co/spaces/Rashal10/baremetal-llm-demo
+      link: https://colab.research.google.com/github/Rashal10/baremetal-llm/blob/main/notebooks/01_quick_demo.ipynb
 
 extra_css:
   - stylesheets/extra.css
@@ -58,7 +58,7 @@ nav:
       - Architecture: architecture.md
       - Curriculum: curriculum.md
   - Resources:
-      - Live Demo: demo.md
+      - Interactive Demos: demo.md
       - API Overview: api.md
 
 markdown_extensions:
